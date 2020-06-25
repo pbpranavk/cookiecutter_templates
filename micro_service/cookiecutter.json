@@ -1,4 +1,6 @@
 {
   "service": "example_service",
-  "create_db": "y"
+  "create_db": "y",
+  "create_ai": "y",
+  "create_proto": "y"
 }

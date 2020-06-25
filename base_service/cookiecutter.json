@@ -1,4 +1,6 @@
 {
-  "project_name" : "base_service",
-  "create_db" : "n"
+  "project_name": "base_service",
+  "create_db": "n",
+  "create_ai": "n",
+  "create_proto": "n"
 }

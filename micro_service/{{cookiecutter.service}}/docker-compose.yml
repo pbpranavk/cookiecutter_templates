@@ -1,0 +1,22 @@
+version: "0.1"
+
+services:
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: "DB_USER"
+      MYSQL_PASSWORD: "DB_PWD"
+      MYSQL_DATABASE: "DB_NAME"
+    logging:
+      driver: "none"
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: /bin/bash -c "
+      python rpc_server.py"
+    depends_on:
+      - "db"
+    links:
+      - db:db
